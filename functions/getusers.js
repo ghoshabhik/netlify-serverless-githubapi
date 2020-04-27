@@ -1,9 +1,7 @@
 const axios = require("axios");
 
 exports.handler = (event, context, callback) => {
-  const API_URL = "https://api.github.com/users";
-  const API_CLIENT = "74d4161cd408f0b7a48b";
-  const API_CLIENT_SECRET = "34f003b2d17f7695fc5b9310eef4064d2716a775";
+  const { API_URL, API_CLIENT, API_CLIENT_SECRET } = process.env;
 
   const URL = `${API_URL}?client_id=${API_CLIENT}&client_secret=${API_CLIENT_SECRET}`;
 
